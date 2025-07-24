@@ -25,17 +25,17 @@ export interface HourlyUnits {
 }
 
 export interface Current {
-  time: string;
-  temperature_2m: number;
-  apparent_temperature: number;
-  wind_speed_10m: number;
-  relative_humidity_2m: number;
+  time?: string;
+  temperature_2m?: number;
+  apparent_temperature?: number;
+  wind_speed_10m?: number;
+  relative_humidity_2m?: number;
 }
 
 export interface CurrentUnits {
-  time: string;
-  temperature_2m: string;
-  apparent_temperature: string;
-  wind_speed_10m: string;
-  relative_humidity_2m: string;
+  time?: string;
+  temperature_2m?: string;
+  apparent_temperature?: string;
+  wind_speed_10m?: string;
+  relative_humidity_2m?: string;
 }
