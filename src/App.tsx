@@ -86,7 +86,7 @@ function App() {
         <Grid>Elemento: Información adicional</Grid>
 
       </Grid>
-   );
+   )
 }
 
 export default App;
