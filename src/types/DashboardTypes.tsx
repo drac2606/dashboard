@@ -6,8 +6,10 @@ export interface OpenMeteoResponse {
   timezone: string;
   timezone_abbreviation: string;
   elevation: number;
-  hourly_units: Hourlyunits;
+  hourly_units: HourlyUnits;
   hourly: Hourly;
+  current: Current;
+  current_units: CurrentUnits;
 }
 
 export interface Hourly {
@@ -16,8 +18,24 @@ export interface Hourly {
   relative_humidity_2m: number[];
 }
 
-export interface Hourlyunits {
+export interface HourlyUnits {
   time: string;
   temperature_2m: string;
+  relative_humidity_2m: string;
+}
+
+export interface Current {
+  time: string;
+  temperature_2m: number;
+  apparent_temperature: number;
+  wind_speed_10m: number;
+  relative_humidity_2m: number;
+}
+
+export interface CurrentUnits {
+  time: string;
+  temperature_2m: string;
+  apparent_temperature: string;
+  wind_speed_10m: string;
   relative_humidity_2m: string;
 }
