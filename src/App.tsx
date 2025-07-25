@@ -20,7 +20,7 @@ function App() {
       <Grid container spacing={5} justifyContent="center" alignItems="center">
 
         {/* Encabezado */}
-        <Grid size={{ xs: 12, md: 12 }}>Elemento: Encabezado
+        <Grid size={{ xs: 12, md: 12 }}>
           <HeaderUI/>
         </Grid>
 
@@ -30,7 +30,7 @@ function App() {
         </Grid>
 
         {/* Selector */}
-        <Grid size={{ xs: 12, md: 3  }}>Elemento: Selector
+        <Grid size={{ xs: 12, md: 3  }}>
           <SelectorUI/>
         </Grid>
 
@@ -85,8 +85,10 @@ function App() {
            </Grid>
 
         {/* Información adicional */}
-        <Grid className="min-h-screen bg-gray-100">Elemento: Información adicional</Grid>
-              <DashboardClima />
+        <Grid className="min-h-screen bg-gray-100">
+                <DashboardClima />
+        </Grid>
+              
       </Grid>
 
    );
