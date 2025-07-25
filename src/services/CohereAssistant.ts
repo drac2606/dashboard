@@ -1,4 +1,5 @@
-import cohere from 'cohere-ai';
+import * as cohereImport from 'cohere-ai';
+const cohere = cohereImport as any;
 
 const MAX_CALLS_PER_HOUR = 20;
 let callCount = 0;
@@ -37,3 +38,4 @@ export async function askWeatherAssistant(question: string): Promise<{ answer?: 
     return { error: 'Error al obtener respuesta del asistente.' };
   }
 }
+
