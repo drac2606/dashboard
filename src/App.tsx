@@ -85,7 +85,7 @@ function App() {
            </Grid>
 
         {/* Información adicional */}
-        <Grid>Elemento: Información adicional</Grid>
+        <Grid className="min-h-screen bg-gray-100">Elemento: Información adicional</Grid>
               <DashboardClima />
       </Grid>
 
