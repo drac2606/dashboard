@@ -10,6 +10,7 @@ import IndicatorUI from './components/IndicatorUI';
 import DataFetcher from './functions/DataFetcher';
 import TableUI from './components/TableUI';
 import ChartUI from './components/ChartUI';
+import AssistantUI from './components/AssistantUI';
 
 
 function App() {
@@ -85,7 +86,7 @@ function App() {
 
         {/* Información adicional */}
         <Grid>Elemento: Información adicional</Grid>
-
+                  <AssistantUI />
       </Grid>
    );
 }
