@@ -10,7 +10,7 @@ import IndicatorUI from './components/IndicatorUI';
 import DataFetcher from './functions/DataFetcher';
 import TableUI from './components/TableUI';
 import ChartUI from './components/ChartUI';
-import DashboardClima from './components/DashboardClima';
+import DashboardClima from './functions/DashboardClima';
 
 
 function App() {
