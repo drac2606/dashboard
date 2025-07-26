@@ -1,0 +1,317 @@
+/* Estilos globales para el dashboard climático */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-blue: #1e3a8a;
+  --secondary-blue: #3b82f6;
+  --accent-blue: #60a5fa;
+  --light-blue: #dbeafe;
+  --sky-blue: #0ea5e9;
+  --ocean-blue: #0891b2;
+  --warm-orange: #f97316;
+  --sunny-yellow: #fbbf24;
+  --cloud-gray: #64748b;
+  --light-gray: #f1f5f9;
+  --white: #ffffff;
+  --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  --gradient-secondary: linear-gradient(135deg, #0ea5e9 0%, #0891b2 100%);
+  --gradient-warm: linear-gradient(135deg, #f97316 0%, #fbbf24 100%);
+  --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: var(--primary-blue);
+  overflow-x: hidden;
+}
+
+/* Animaciones simplificadas para mejor rendimiento */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+/* Clases de utilidad para animaciones simplificadas */
+.animate-fade-in-up {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Efectos de hover simplificados */
+.hover-lift {
+  transition: all 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Estilos para el contenedor principal */
+.dashboard-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: var(--shadow-large);
+  margin: 20px;
+  padding: 30px;
+  min-height: calc(100vh - 40px);
+}
+
+/* Estilos para tarjetas */
+.weather-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.weather-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Estilos para indicadores */
+.indicator-card {
+  background: linear-gradient(135deg, var(--white) 0%, var(--light-blue) 100%);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.indicator-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--accent-blue);
+}
+
+/* Estilos para el selector */
+.selector-container {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--shadow-soft);
+  border: 2px solid var(--light-blue);
+  transition: all 0.2s ease;
+}
+
+.selector-container:hover {
+  border-color: var(--accent-blue);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Estilos para la tabla */
+.table-container {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--light-gray);
+  transition: all 0.2s ease;
+}
+
+.table-container:hover {
+  box-shadow: var(--shadow-medium);
+}
+
+/* Estilos para el gráfico */
+.chart-container {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--light-gray);
+  transition: all 0.2s ease;
+}
+
+.chart-container:hover {
+  box-shadow: var(--shadow-medium);
+}
+
+/* Estilos para alertas */
+.alert-container {
+  background: linear-gradient(135deg, var(--sunny-yellow) 0%, var(--warm-orange) 100%);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: var(--shadow-soft);
+  border: none;
+  color: var(--white);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.alert-container:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Estilos para títulos */
+.title-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Estilos para iconos */
+.weather-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Estilos para valores numéricos */
+.value-display {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin: 10px 0;
+}
+
+/* Estilos para etiquetas */
+.label-text {
+  font-size: 0.9rem;
+  color: var(--cloud-gray);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Estilos para estados de carga */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 2s infinite;
+  border-radius: 8px;
+  height: 20px;
+  margin: 10px 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .dashboard-container {
+    margin: 10px;
+    padding: 20px;
+  }
+  
+  .weather-card {
+    padding: 16px;
+  }
+  
+  .title-gradient {
+    font-size: 1.5rem;
+}
+
+  .value-display {
+    font-size: 1.5rem;
+  }
+}
+
+/* Efectos de partículas de fondo */
+.particles-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Estilos para el scroll personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gradient-secondary);
+}
