@@ -2,7 +2,7 @@
 
 Un dashboard interactivo y moderno que muestra información meteorológica en tiempo real utilizando la API de Open Meteo, con un asistente de IA especializado en meteorología.
 
-## 🚀 Características Principales
+## Características Principales
 
 ### Dashboard Meteorológico
 - **Datos en tiempo real** de 4 ciudades ecuatorianas (Guayaquil, Quito, Manta, Cuenca)
