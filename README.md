@@ -1,24 +1,24 @@
-# 🌤️ Dashboard del Clima - React
+# Dashboard del Clima - React
 
 Un dashboard interactivo y moderno que muestra información meteorológica en tiempo real utilizando la API de Open Meteo, con un asistente de IA especializado en meteorología.
 
 ## 🚀 Características Principales
 
-### 📊 Dashboard Meteorológico
+### Dashboard Meteorológico
 - **Datos en tiempo real** de 4 ciudades ecuatorianas (Guayaquil, Quito, Manta, Cuenca)
 - **Indicadores dinámicos** con temperatura, humedad, velocidad del viento y temperatura aparente
 - **Gráfico interactivo** que muestra tendencias de temperatura y viento
 - **Tabla de datos horarios** con información detallada de las próximas 24 horas
 - **Interfaz responsiva** con diseño moderno y animaciones suaves
 
-### 🤖 Asistente de IA Meteorológico
+### Asistente de IA Meteorológico
 - **Chat inteligente** especializado en temas meteorológicos
 - **Respuestas en español** de manera amigable y educativa
 - **Prompt optimizado** para preguntas sobre clima, meteorología y fenómenos atmosféricos
 - **Límite de uso controlado** (50 preguntas por hora)
 - **Manejo robusto de errores** con mensajes claros
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **React 19** - Framework principal
 - **TypeScript** - Tipado estático
@@ -29,7 +29,7 @@ Un dashboard interactivo y moderno que muestra información meteorológica en ti
 - **Open Meteo API** - Datos meteorológicos
 - **Cohere API** - Asistente de IA
 
-## 🤖 Asistente de IA - Configuración
+## Asistente de IA - Configuración
 
 ### Obtener API Key de Cohere
 1. Ve a [Cohere](https://cohere.com/)
@@ -51,7 +51,7 @@ VITE_COHERE_API_KEY=tu_api_key_de_cohere_aqui
 - ¿Cómo se forman las nubes?
 - ¿Qué es la presión atmosférica?
 
-## 🚀 Instalación y Uso
+## Instalación y Uso
 
 1. **Clonar el repositorio**
 ```bash
@@ -75,7 +75,7 @@ VITE_COHERE_API_KEY=tu_api_key_de_cohere_aqui
 npm run dev
 ```
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 src/
@@ -97,7 +97,7 @@ src/
 └── App.tsx                  # Componente principal
 ```
 
-## 🎯 Funcionalidades Destacadas
+## Funcionalidades Destacadas
 
 ### Dashboard Meteorológico
 - **Selección de ciudades**: Guayaquil, Quito, Manta, Cuenca
@@ -113,4 +113,4 @@ src/
 
 ---
 
-Desarrollado con ❤️ usando React, TypeScript y Material-UI
+Desarrollado usando React, TypeScript y Material-UI
